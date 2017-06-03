@@ -1,7 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.contrib.auth.models import User
-from apps.estudiante.models import Estudiante
+from django.db.models.signals import post_save
+
+from django.db import models
+#from apps.estudiante.models import Estudiante
+import sys
+
+#from . import  models.Estudiante
+from models import Estudiante
+
+
 
 from django.db import models
 
@@ -43,13 +52,6 @@ class Paradero(models.Model):
     def __str__(self):
         return  "%s %s" %(self.nombre_p, self.cod_p)
 
-class Posee(models.Model):
-    nombre_r = models.ForeignKey(Ruta, on_delete=models.CASCADE)  # Relaciona la ruta, llave foranea
-    cod_p = models.ForeignKey(Paradero, on_delete=models.CASCADE)  # Relaciona el codigo de paradero, llave foranea
-
-    def __str__(self):
-        return  "%s %s" %(self.nombre_r, self.cod_p)
-
 class Ruta(models.Model):
     nombre_r = models.CharField(max_length=20, primary_key=True)  # Nombre de  ruta
     cod_bus = models.ForeignKey(Bus, on_delete=models.CASCADE)  # Relaciona la ruta con un bus, llave foranea
@@ -57,6 +59,14 @@ class Ruta(models.Model):
 
     def __str__(self):
         return  "%s %s" %(self.nombre_r, self.paraderos)
+class Posee(models.Model):
+    nombre_r = models.ForeignKey(Ruta, on_delete=models.CASCADE)  # Relaciona la ruta, llave foranea
+    cod_p = models.ForeignKey(Paradero, on_delete=models.CASCADE)  # Relaciona el codigo de paradero, llave foranea
+
+    def __str__(self):
+        return  "%s %s" %(self.nombre_r, self.cod_p)
+
+
 
 class Toma(models.Model):
     HORA_SALIDA = (
