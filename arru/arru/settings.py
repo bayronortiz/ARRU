@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'arru.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'arru',     # Nombre de Base Datos
+        'NAME': 'proyecto',     # Nombre de Base Datos
         'USER': 'root',     # Usuario Base Datos
         'PASSWORD': 'arru123',     # Password Usuario MySQL
         'HOST': 'localhost',    # Direccion Base de Datos
