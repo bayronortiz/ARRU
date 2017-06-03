@@ -1,19 +1,13 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 from __future__ import unicode_literals
 from django.contrib.auth.models import User
+from django.db import models
 from django.db.models.signals import post_save
-
-from django.db import models
-#from apps.estudiante.models import Estudiante
-import sys
-
-#from . import  models.Estudiante
-from models import Estudiante
+from apps import *
 
 
-
-from django.db import models
-
+from apps.estudiante.models import Estudiante
 # Create your models here.
 class Administrador(models.Model):
     usuario = models.OneToOneField(User)  #Nombre usuario administrador
@@ -38,7 +32,7 @@ class Conductor(models.Model):
 
 class Bus(models.Model):
     cod_bus = models.CharField(max_length=3, primary_key=True)  #Codigo del bus, llave primaria
-    capacidad = models.IntegerField(max_length=2)  # Capacidad del bus
+    capacidad = models.IntegerField()  # Capacidad del bus
     id_c = models.ForeignKey(Conductor, on_delete=models.CASCADE)  # Relaciona el bus con un conductor, llave foranea
 
     def __str__(self):
