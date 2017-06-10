@@ -53,14 +53,13 @@ class Ruta(models.Model):
 
     def __str__(self):
         return  "%s %s" %(self.nombre_r, self.paraderos)
+
 class Posee(models.Model):
     nombre_r = models.ForeignKey(Ruta, on_delete=models.CASCADE)  # Relaciona la ruta, llave foranea
     cod_p = models.ForeignKey(Paradero, on_delete=models.CASCADE)  # Relaciona el codigo de paradero, llave foranea
 
     def __str__(self):
         return  "%s %s" %(self.nombre_r, self.cod_p)
-
-
 
 class Toma(models.Model):
     HORA_SALIDA = (
@@ -70,7 +69,7 @@ class Toma(models.Model):
         ('6',  '06:00 PM'),
     )
     hora = models.CharField(max_length=2, choices=HORA_SALIDA)  #Hora a la que sale la ruta, llave primaria
-    fecha = models.DateField(max_length=20)  # Fecha  en la que se toma la ruta, llave primaria
+    fecha = models.DateField(max_length=20, auto_now_add=True)  # Fecha  en la que se toma la ruta, llave primaria
     nombre_r = models.ForeignKey(Ruta, on_delete=models.CASCADE)  # Relaciona la ruta que se tomo, llave primaria
     codigo_e = models.ForeignKey(Estudiante, on_delete=models.CASCADE)  # Relaciona el estudiante que tomo la ruta, llave primaria
 
