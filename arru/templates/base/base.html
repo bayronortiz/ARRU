@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		{% block extrahead %}
+			{% load static %}
+		<!--<link rel="stylesheet" href="{% static 'css/estilo.css'%} " type="text/css">-->
+		{% endblock %}
+		<title>{% block title %} Base {% endblock %}</title>
+	</head>
+	<body>
+	{% block nav%}
+	    <nav>
+			<ul>
+				<li>mama</li>
+				<li>papa</li>
+			</ul>
+		</nav>
+	{% endblock %}
+	{%block content%}
+			<h1> Soy la pagina base</h1>
+		{% endblock %}
+
+	    {%block footer%}
+			<h3> Unillanos</h3>
+		{% endblock %}
+	</body>
+</html>
