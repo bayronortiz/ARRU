@@ -51,7 +51,7 @@ class Ruta(models.Model):
     paraderos = models.ManyToManyField(Paradero, through='Posee') # Indica que una ruta tiene muchos paraderos
 
     def __str__(self):
-        return  "%s %s" %(self.nombre_r, self.paraderos)
+        return  self.nombre_r
 
 class Posee(models.Model):
     nombre_r = models.ForeignKey(Ruta, on_delete=models.CASCADE)  # Relaciona la ruta, llave foranea
@@ -73,7 +73,7 @@ class Toma(models.Model):
     codigo_e = models.ForeignKey(Estudiante, on_delete=models.CASCADE)  # Relaciona el estudiante que tomo la ruta, llave primaria
 
     class Meta:
-        unique_together = (('hora', 'fecha', 'nombre_r', 'codigo_e'), )#Llave primaria compuesta
+        unique_together = (('hora', 'fecha', 'codigo_e'), )#Llave primaria compuesta
 
     def __str__(self):
         return "%s %s %s" % (self.nombre_r, self.codigo_e, self.hora)

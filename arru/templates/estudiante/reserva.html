@@ -5,12 +5,12 @@
   {%endblock%}
 
 {%block content %}
-    <h4> REGISTRAR ESTUDIANTE </h4>
+    <h4> RESERVAR CUPO EN RUTA </h4>
     <form method="post">
         {%csrf_token %}
         {{ form.as_p}}
 
-        <button type="submit" >Registrar</button>
+        <button type="submit" >Reservar</button>
     </form>
 
 {% endblock %}

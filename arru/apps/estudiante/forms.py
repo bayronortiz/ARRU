@@ -2,8 +2,7 @@
 from __future__ import absolute_import
 from django import forms
 from .models import Estudiante
-#from apps import *
-from apps.administrador.models import Toma
+from apps.administrador.models import Toma, Ruta
 
 class RegistroForm(forms.ModelForm):
     class Meta:
@@ -45,7 +44,7 @@ class ReservaForm(forms.ModelForm):
 
         widgets = {
             'codigo_e': forms.TextInput(attrs={'class': 'form-control'}),
-            'nombre_r': forms.TextInput(attrs={'class': 'form-control'}),
-            'hora': forms.TextInput(attrs={'class': 'form-control'}),
+            'nombre_r': forms.Select(attrs={'class': 'form-control'}),
+            'hora': forms.Select(attrs={'class': 'form-control'}),
             }
 
