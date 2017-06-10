@@ -2,8 +2,8 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
-from django.views.generic import CreateView
-from .forms import RegistroForm, ReservaForm
+from django.views.generic import CreateView, DeleteView
+from .forms import RegistroForm, ReservaForm, CancelarForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 from .models import Estudiante
@@ -21,5 +21,12 @@ class ReservarRuta(CreateView):
     form_class = ReservaForm
     template_name = "estudiante/reserva.html"
     success_url = reverse_lazy("estudiante:reserva_ruta")
+
+class CancelarRuta(DeleteView):
+	model = Toma
+	#form_class = CancelarForm
+	#template_name = "estudiante/cancelar.html"
+	success_url = reverse_lazy("estudiante:cancelar_ruta")
+		
 
 

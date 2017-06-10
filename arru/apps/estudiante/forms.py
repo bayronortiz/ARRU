@@ -48,3 +48,25 @@ class ReservaForm(forms.ModelForm):
             'hora': forms.Select(attrs={'class': 'form-control'}),
             }
 
+class CancelarForm(forms.ModelForm):
+    class Meta:
+        model= Toma
+
+        fields =[
+            'codigo_e',
+            'nombre_r',
+            'hora',
+            ]
+
+        labels = {
+            'codigo_e':'Código',
+            'nombre_r':'Ruta',
+            'hora': 'Hora',
+        }
+
+        widgets = {
+            'codigo_e': forms.TextInput(attrs={'class': 'form-control'}),
+            'nombre_r': forms.Select(attrs={'class': 'form-control'}),
+            'hora': forms.Select(attrs={'class': 'form-control'}),    
+        }
+
