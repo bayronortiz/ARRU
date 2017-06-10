@@ -5,9 +5,8 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.signals import post_save
 from apps import *
-
-
 from apps.estudiante.models import Estudiante
+
 # Create your models here.
 class Administrador(models.Model):
     usuario = models.OneToOneField(User)  #Nombre usuario administrador
