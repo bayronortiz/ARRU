@@ -25,7 +25,7 @@ SECRET_KEY = 'c#a%!h+a=t2s@857rb*!-z6l0djprj+!h88i1*o-e!_na5h$3k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['proyectoarru.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -84,11 +84,16 @@ WSGI_APPLICATION = 'arru.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+	'OPTIONS': {
+		'sql_mode': 'traditional',
+	},
         'NAME': 'proyecto',     # Nombre de Base Datos
         'USER': 'root',     # Usuario Base Datos
+	#'NAME': 'ProyectoArru$proyecto',   # Nombre Base Datos PythonAnywhere
+	#'USER': 'ProyectoArru',		# Usuario Base Datos PythonAnywhere
         'PASSWORD': 'arru12345',     # Password Usuario MySQL
-        #'PASSWORD': 'arru123',     # Password Usuario MySQL Danilo comenten esto
         'HOST': 'localhost',    # Direccion Base de Datos
+	#'HOST': 'ProyectoArru.mysql.pythonanywhere-services.com',   # Direccion Base de Datos PythonAnywhere
         'PORT': 3306,   # Puerto de la base de datos
     }
 }
