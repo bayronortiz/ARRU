@@ -8,9 +8,14 @@
     <h4> CANCELAR CUPO EN RUTA </h4>
     <form method="post">
         {%csrf_token %}
-        {{ form.as_p}}
+        {{ form.as_p }}
 
         <button type="submit" >Cancelar</button>
+        <br><br>
+        {% if msg %}
+            {{ msg }}
+        {% endif %}
+
     </form>
 
 {% endblock %}

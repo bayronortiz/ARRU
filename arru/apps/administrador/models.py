@@ -70,7 +70,7 @@ class Toma(models.Model):
     hora = models.CharField(max_length=2, choices=HORA_SALIDA)  #Hora a la que sale la ruta, llave primaria
     fecha = models.DateField(max_length=20, auto_now_add=True)  # Fecha  en la que se toma la ruta, llave primaria
     nombre_r = models.ForeignKey(Ruta, on_delete=models.CASCADE)  # Relaciona la ruta que se tomo, llave primaria
-    codigo_e = models.ForeignKey(Estudiante, on_delete=models.CASCADE)  # Relaciona el estudiante que tomo la ruta, llave primaria
+    codigo_e = models.OneToOneField(Estudiante, on_delete=models.CASCADE)  # Relaciona el estudiante que tomo la ruta, llave primaria
 
     class Meta:
         unique_together = (('hora', 'fecha', 'codigo_e'), )#Llave primaria compuesta
