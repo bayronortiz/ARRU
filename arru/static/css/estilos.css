@@ -1,0 +1,35 @@
+
+
+body{
+	background:#fff;
+    
+}
+#titulo{
+	width: 700px;
+	height: 80px;
+	margin-left:300px;
+	margin-top: 20px;
+	border-style: double;
+	border-width: 1px;
+	font-family:"High Tower Text";
+	font-size:16px;
+}
+#cuerpo{
+	width: 700px;
+	height: 400px;
+	margin-left:300px;
+	margin-top: 5px;
+	border-style: double;
+	border-width: 1px;
+	
+	
+}
+#footer{
+	width: 700px;
+	height: 110px;
+	margin-left:300px;
+	margin-top: 10px;
+	border-style: double;
+	border-width: 1px;
+	
+}

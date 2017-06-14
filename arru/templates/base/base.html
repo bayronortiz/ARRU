@@ -1,31 +1,98 @@
 <!DOCTYPE html>
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <html>
 	<head>
-		{% block extrahead %}
-			{% load static %}
-		<!--<link rel="stylesheet" href="{% static 'css/estilo.css'%} " type="text/css">-->
+	{% block archivos_css %}
+		{% load static %}
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Creative CSS3 Animation Menus" />
+        <meta name="keywords" content="menu, navigation, animation, transition, transform, rotate, css3, web design, component, icon, slide" />
+        <meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/css/style1.css' %}" />
+        <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="{% static 'css/estilos.css' %} " type="text/css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
 		<link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}"> 
 		{% endblock %}
-		<title>{% block title %} Base {% endblock %}</title>
-
+		<title>{% block title %}Principal {% endblock %}</title>
 	</head>
 	<body>
-	
-	{% block nav%}
-	    <nav>
-			<ul>
-				<li>mama</li>
-				<li>papa</li>
-			</ul>
-		</nav>
-	{% endblock %}
-	{%block content%}
-			<h1> Soy la pagina base</h1>
-		{% endblock %}
-
-	    {%block footer%}
-			<h3> Unillanos</h3>
-		{% endblock %}
+    {% block cuerpo %}
+		<div id = "titulo">
+			<header>
+			<h1> {% block Principal %}RUTAS DE BARRIO UNILLANOS{% endblock %}</h1>
+			</header>
+		</div>
+		<div id = "cuerpo">
+		    <div class="content">
+                <ul class="ca-menu">
+                    <li id = "info">
+                        <a href="#">
+                            <span class="ca-icon">L</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Información</h2>
+                                <h3 class="ca-sub">Todas las rutas disponibles</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id = "inscribir">
+                        <a href="{% url 'estudiante:registro_estudiante' %}">
+                            <span class="ca-icon">U</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Registro</h2>
+                                <h3 class="ca-sub">Regístrese para hacer uso del sistema</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id = "reservar">
+                        <a href="{% url 'estudiante:reserva_ruta' %}">
+                            <span class="ca-icon">.</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Reservación</h2>
+                                <h3 class="ca-sub">Reserve un cupo en cualquier ruta.</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id = "cancelar">
+                        <a href="#">
+                            <span class="ca-icon">'</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Cancelación</h2>
+                                <h3 class="ca-sub">Cancele un cupo previamente reservado</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- content -->
+        </div>
+			
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		</div>
+    {% endblock %}
 	</body>
+	{%block footer%}
+	<footer>
+		<div  id = "footer">
+			
+    <ul class="nav">
+        <li>
+        <!--[if lte IE 6]><a class="ie6" href="#url"><table><tr><td><![endif]-->
+            <ul class="sub">
+                <li><a href="http://www.script-tutorials.com/"><b>Unillanos</b><p>custom description here</p><i></i></a></li>
+                <li><a href="http://www.script-tutorials.com/category/html-css/"><b>Página principal</b><p>Universidad de los Llanos</p><i></i></a></li>
+                <li><a href="http://www.script-tutorials.com/category/resources/"><b>Twitter</b><p>@unillanos_</p><i></i></a></li>
+                <li><a href="http://www.script-tutorials.com/about/"><b>Facebook</b><p>Red Unillanista</p><i></i></a></li>
+                <li><a href="http://www.script-tutorials.com/creating-css3-slideout-menu-5/"><b>Youtube</b><p>Unillanos Televisión</p><i></i></a></li>
+            </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        </li>
+    </ul>
+    <div style="clear:both"></div>
+
+		</div>
+	</footer>
+	{% endblock %}
 </html>

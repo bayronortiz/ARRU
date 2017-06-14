@@ -22,6 +22,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^estudiante/', include('apps.estudiante.urls')),
+    url(r'^', include('apps.estudiante.urls')),
 ]
 
 if settings.DEBUG:

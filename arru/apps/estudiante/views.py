@@ -9,6 +9,9 @@ from .models import Estudiante
 from apps.administrador.models import Toma
 
 # Create your views here.
+def index(request):
+    return render(request,'estudiante/index.html')
+
 class RegistrarEstudiante(CreateView):
     model = Estudiante
     form_class = RegistroForm
