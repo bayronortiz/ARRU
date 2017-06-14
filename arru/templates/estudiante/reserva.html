@@ -1,18 +1,12 @@
-{% extends 'base/base.html' %}
-{% block archivos_css %}{% endblock %}
-{% block title %} Reserva{% endblock %}
-{% block nav%}{%endblock%}
-{% block cuerpo%}
+{% extends 'estudiante/registro.html' %}
 
-{%block content %}
-    <h4> RESERVAR CUPO EN RUTA </h4>
+{% block title %} Reserva{% endblock %}
+    {% block accion%}RESERVAR CUPO{% endblock %}
     <form method="post">
         {%csrf_token %}
         {{ form.as_p}}
 
-        <button type="submit" >Reservar</button>
+        <button type="submit" >{% block boton %}Reservar{% endblock %}</button>
     </form>
 
-{% endblock %}
-{%endblock%}
-{%block footer%}{% endblock %}
+

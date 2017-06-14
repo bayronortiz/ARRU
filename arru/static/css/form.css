@@ -1,0 +1,40 @@
+
+body{
+	font-family :"Consolas";
+	font-size : 16px;
+}
+h1{
+	text-align: center;
+}
+h4{
+	text-align: center;
+}
+#formulario{
+	padding-left: 50px;
+	padding-top:20px;
+	margin-left:470px;
+	margin-top:120px;
+	height: 300px;
+	width: 360px;
+	border-style: double;
+	border-width: 1px; 
+}
+label{
+	font-family: "Book Antiqua";
+	
+}
+input{
+	width: 200px;
+    margin-bottom: 10px;
+	margin-left: 10px;
+}
+#boton{
+	margin-left: 110px;
+	width: 100px;
+	
+}
+select{
+	margin-left: 30px;
+	width: 200px;
+
+}

@@ -7,17 +7,18 @@
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Creative CSS3 Animation Menus" />
-        <meta name="keywords" content="menu, navigation, animation, transition, transform, rotate, css3, web design, component, icon, slide" />
-        <meta name="author" content="Codrops" />
+
+        <meta name="keywords" content="rutas barrio, unillanos, rutas unillanos, transporte unillanos" />
+        <meta name="author" content="Unillanos" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/css/demo.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/css/style1.css' %}" />
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
 		<link rel="stylesheet" href="{% static 'css/estilos.css' %} " type="text/css">
 		<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
-		<link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}"> 
+
 		{% endblock %}
 		<title>{% block title %}Principal {% endblock %}</title>
+        <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
 	</head>
 	<body>
     {% block cuerpo %}
@@ -57,7 +58,7 @@
                         </a>
                     </li>
                     <li id = "cancelar">
-                        <a href="#">
+                        <a href="{% url 'estudiante:cancelar_ruta' %}">
                             <span class="ca-icon">'</span>
                             <div class="ca-content">
                                 <h2 class="ca-main">Cancelación</h2>

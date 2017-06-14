@@ -1,17 +1,20 @@
-{% extends 'base/base.html' %}
-{% block archivos_css %}{% endblock %}
-{% block title %} Registro{% endblock %}
-{% block nav%}{%endblock%}
-{% block cuerpo%}
-{%block content %}
-    <h4> REGISTRAR ESTUDIANTE </h4>
-    <form method="post">
-        {%csrf_token %}
-        {{ form.as_p}}
 
-        <button type="submit" >Registrar</button>
-    </form>
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
+    <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
+    <title>{% block title %} Registro {% endblock %}</title>
+</head>
 
-{% endblock %}
-{%endblock%}
-{%block footer%}{% endblock %}
+<body>
+    {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
+        <div id = "formulario">
+            <h4>{% block accion%} REGISTRAR ESTUDIANTE {% endblock %}</h4>
+             <form method="post">
+                 {%csrf_token %}
+                 {{ form.as_p}}
+                 <button type="submit"  id = "boton">{% block boton %}Registrar{% endblock %}</button>
+            </form>
+        </div>>
+</body>

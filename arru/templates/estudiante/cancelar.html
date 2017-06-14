@@ -1,21 +1,14 @@
-{% extends 'base/base.html' %}
-
-{% block title %} Cancelar{% endblock %}
-{% block nav%}
-  {%endblock%}
-
-{%block content %}
-    <h4> CANCELAR CUPO EN RUTA </h4>
+{% extends 'estudiante/registro.html' %}
+   {% block title %} Cancelar {% endblock %}
+    {% block accion%}CANCELAR CUPO{% endblock %}
     <form method="post">
         {%csrf_token %}
         {{ form.as_p }}
 
-        <button type="submit" >Cancelar</button>
+        <button type="submit" >{% block boton %}Cancelar{% endblock %}</button>
         <br><br>
         {% if msg %}
             {{ msg }}
         {% endif %}
 
     </form>
-
-{% endblock %}
