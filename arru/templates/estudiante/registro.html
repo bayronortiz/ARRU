@@ -2,19 +2,62 @@
 <!DOCTYPE html>
 <head>
     {% load static %}
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
     <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
-    <title>{% block title %} Registro {% endblock %}</title>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+     <title>{% block title %} Registro {% endblock %}</title>
 </head>
 
 <body>
+{% block logo%}
+        <div id = "logo">
+
+        </div>
+    {% endblock %}
     {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
-        <div id = "formulario">
-            <h4>{% block accion%} REGISTRAR ESTUDIANTE {% endblock %}</h4>
-             <form method="post">
-                 {%csrf_token %}
-                 {{ form.as_p}}
-                 <button type="submit"  id = "boton">{% block boton %}Registrar{% endblock %}</button>
-            </form>
-        </div>>
+
+
+        <div id = "cabe_acc">
+             <h2>{% block accion%} Registrar Estudiante {% endblock %}</h2>
+        </div>
+        <div id = "descrip">
+            <h3>{% block tit%} Bienvenido {% endblock %}</h3>
+            <p id = "des">{% block descri%} Para hacer uso del sistema, debera registrarse una única vez. Llene los campos y haga click en registar y podrá realizar su reserva en la ruta y horario que desee.  {% endblock %}</p>
+
+        </div>
+
+        <div id = "formulario" class = "form">
+
+            <form method="post">
+                {%csrf_token %}
+                {{ form.as_p}}
+                <button type="submit"  id = "boton" class = "myButton">{% block boton %}Registrar{% endblock %}</button>
+             </form>
+        </div>
+<nav>
+
+		<ul class="clearfix">
+
+			<li><a href="#"><span class="fontawesome-user"></span></a>
+
+				<ul>
+
+					<li><a href="https://www.facebook.com/UnillanosOficial/" class="facebook"><span class="fontawesome-facebook"></span></a></li>
+					<li><a href="https://twitter.com/unillanos_" class="twitter"><span class="fontawesome-twitter"></span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCmhXbLrVeyotUiBsaPBcxcA/feed" class="youtobe"><span class="fontawesome-play"></span></a></li>
+					<li><a href="http://www.unillanos.edu.co/" class="unillanos"><span class="fontawesome-underline"></span></a></li>
+
+
+				</ul>
+
+			</li>
+
+		</ul>
+
+	</nav>
+
+
+
 </body>

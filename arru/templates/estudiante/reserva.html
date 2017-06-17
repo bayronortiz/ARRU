@@ -2,6 +2,8 @@
 
 {% block title %} Reserva{% endblock %}
     {% block accion%}RESERVAR CUPO{% endblock %}
+    {% block tit%} Aproveche {% endblock %}
+{% block descri%} Para reservar un cupo, digite el código con el que se registro, elija una ruta y una hora. Recuerde estar 5 minutos antes de la hora de salida. Solo puede reservar un cupo para una misma hora. {% endblock %}
     <form method="post">
         {%csrf_token %}
         {{ form.as_p}}

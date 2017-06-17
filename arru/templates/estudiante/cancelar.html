@@ -1,6 +1,8 @@
 {% extends 'estudiante/registro.html' %}
    {% block title %} Cancelar {% endblock %}
     {% block accion%}CANCELAR CUPO{% endblock %}
+    {% block tit%} Adios!!! {% endblock %}
+{% block descri%} Para cancelar un cupo, deber haber reservado uno previamente, digite el código, la ruta y la hora en la que realizo la reserva.  {% endblock %}
     <form method="post">
         {%csrf_token %}
         {{ form.as_p }}

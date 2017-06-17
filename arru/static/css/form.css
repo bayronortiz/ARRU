@@ -1,40 +1,328 @@
+@charset "utf-8";
 
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
 body{
-	font-family :"Consolas";
-	font-size : 16px;
+	background-color: #d9f3ff;
 }
 h1{
+    margin-top: -90px;
 	text-align: center;
-}
-h4{
-	text-align: center;
-}
-#formulario{
-	padding-left: 50px;
-	padding-top:20px;
-	margin-left:470px;
-	margin-top:120px;
-	height: 300px;
-	width: 360px;
-	border-style: double;
-	border-width: 1px; 
-}
-label{
-	font-family: "Book Antiqua";
-	
-}
-input{
-	width: 200px;
-    margin-bottom: 10px;
-	margin-left: 10px;
-}
-#boton{
-	margin-left: 110px;
-	width: 100px;
-	
-}
-select{
-	margin-left: 30px;
-	width: 200px;
+    font-family: 'Sofia', cursive;
+     font-weight: bold;
+    font-size: 3.2em;
+    text-align: center;
+    margin-bottom: 20px;
+	color: #000000;
 
 }
+h2{
+	text-align: center;
+    font-family: 'Sofia', cursive;
+    font-size: 15px;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+	color: #ffffff;
+    padding-top: 10px;
+}
+h3{
+	font-family: 'Consolas';
+    font-size: 15px;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 20px;
+	color: #000000;
+    padding-top: 10px;
+}
+#des{
+	font-family: "Bookman Old Style";
+	margin-left: 40px;
+	margin-left: 30px;
+	margin-right: 45px;
+    padding-top: 10px;
+}
+#logo{
+    background-color: firebrick;
+    height: 100px;
+    width: 100px;
+    margin-left: 1200px;
+    margin-top: 20px;
+
+}
+#cabe_acc{
+	margin-left: 310px;
+	margin-top: 90px;
+	height: 60px;
+	width: 724px;
+	background-color: #205067;
+}
+#descrip{
+	margin-left: 310px;
+	margin-top: 0px;
+	height: 270px;
+	width: 360px;
+	background:none repeat 0 0 rgb(157, 47, 47);
+	border-radius: 0px 0px 0px 32px;
+	-moz-border-radius: 0px 0px 0px 32px;
+	-webkit-border-radius: 0px 0px 0px 32px;
+	border: 1px solid #000000;
+}
+#formulario {
+	margin-left: 672px;
+	margin-top: -272px;
+	height: 230px;
+	width: 321px;
+	background:none repeat 0 0 rgb(157, 47, 47);
+	border-radius: 0px 0px 32px 0px;
+	-moz-border-radius: 0px 0px 32px 0px;
+	-webkit-border-radius: 0px 0px 32px 0px;
+	border: 1px solid #000000;
+	border-left: 0px;
+
+}
+label {
+	font-family: "Bookman Old Style";
+	margin-left: -20px;
+}
+input#id_codigo_e {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-left: 12px;
+	margin-top: 15px;
+}
+input#id_nombre_e {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+}
+input#id_apellido_e {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+}
+select#id_nombre_r {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-left: 28px;
+}
+select#id_hora {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-left: 28px;
+}
+#boton {
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.myButton {
+	-moz-box-shadow: 0px -2px 0px -7px #3e7327;
+	-webkit-box-shadow: 0px -2px 0px -7px #3e7327;
+	box-shadow: 0px -2px 0px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:6px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+	background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.form {
+  width: 100%;
+  background-color: rgba(255,255,255,.2);
+  text-align: center;
+  padding: 1.25em;
+  border-radius: 5px;
+}
+
+input {
+  margin: 0 0 .4em 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.01);
+  border: 0;
+  border-bottom: 5px solid rgba(0,0,0,.12);
+  line-height: 40px;
+}
+select {
+  margin: 0 0 .4em 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.01);
+  border: 0;
+  border-bottom: 5px solid rgba(0,0,0,.12);
+  line-height: 40px;
+}
+[type='text']:focus {
+  border: 0;
+  border-bottom: 5px solid #2980b9;
+  color: #2c3e50;
+  outline: none;
+}
+[type='select']:focus {
+  border: 0;
+  border-bottom: 5px solid #2980b9;
+  color: #2c3e50;
+  outline: none;
+}
+[type='text'] {
+  padding-left: 1em;
+}
+a {
+  text-decoration: none;
+  font-weight: 900;
+  color: #ecf0f1;
+}
+
+a:hover {
+  color: #bdc3c7;
+}
+
+@charset "utf-8";
+
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+a { text-decoration: none; }
+
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after { clear: both; }
+
+
+
+nav {
+	margin: 50px auto;
+	width: 218px;
+}
+
+nav ul li {
+	margin-bottom: 50px;
+	position: relative;
+}
+
+nav > ul > li > a {
+	background-color: #ded0bb;
+	border: 4px solid #555555;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	color: #205067;
+	display: block;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	width: 32px;
+}
+
+nav ul li ul {
+	background: #f6eddb; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f6eddb 0%, #ccbba4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6eddb), color-stop(100%,#ccbba4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f6eddb 0%,#ccbba4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f6eddb 0%,#ccbba4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f6eddb 0%,#ccbba4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f6eddb 0%,#ccbba4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6eddb', endColorstr='#ccbba4',GradientType=0 ); /* IE6-9 */
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	box-shadow: 0px 1px 2px #352f2c;
+	display: block;
+	height: 40px;
+	left: 52px;
+	padding: 0 8px;
+	position: absolute;
+	top: 0;
+}
+
+nav ul li ul:before {
+	background: #e7dbc7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e7dbc7 0%, #dbcdb8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e7dbc7), color-stop(100%,#dbcdb8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e7dbc7 0%,#dbcdb8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e7dbc7 0%,#dbcdb8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e7dbc7 0%,#dbcdb8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e7dbc7 0%,#dbcdb8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7dbc7', endColorstr='#dbcdb8',GradientType=0 ); /* IE6-9 */
+	content: "";
+	display: block;
+	height: 8px;
+	left: -4px;
+	position: absolute;
+	top: 16px;
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 8px;
+}
+
+nav ul li ul li {
+	float: left;
+}
+
+nav ul li ul li a {
+	border: none;
+	color: #645650;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 30px;
+}
+
+
+
+

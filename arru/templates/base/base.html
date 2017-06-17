@@ -9,7 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <meta name="title" content="Rutas Barrio Unillanos">
         <meta name="Description" content="La aplicación web de rutas de barrio unillanos permite a los estudiantes de la universidad inscribirse, reservar y cancelar un cupo en las rutas disp.">
-
         <meta name="keywords" content="rutas barrio, unillanos, rutas unillanos, transporte unillanos" />
         <meta name="author" content="Unillanos" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/css/demo.css' %}" />
@@ -17,18 +16,23 @@
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
 		<link rel="stylesheet" href="{% static 'css/estilos.css' %} " type="text/css">
 		<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
-
+         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+       <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		{% endblock %}
 		<title>{% block title %}Página Principal {% endblock %}</title>
         <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
 	</head>
 	<body>
-    {% block cuerpo %}
-		<div id = "titulo">
-			<header>
-			<h1> {% block Principal %}RUTAS DE BARRIO UNILLANOS{% endblock %}</h1>
-			</header>
-		</div>
+
+                <div id = "titulo">
+			            <h1> RUTAS DE BARRIO UNILLANOS</h1>
+                </div>
+
+
 		<div id = "cuerpo">
 		    <div class="content">
                 <ul class="ca-menu">
@@ -74,28 +78,29 @@
 			
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		</div>
-    {% endblock %}
+
 	</body>
 	{%block footer%}
-	<footer>
+
 		<div  id = "footer">
 			
-    <ul class="nav">
-        <li>
-        <!--[if lte IE 6]><a class="ie6" href="#url"><table><tr><td><![endif]-->
-            <ul class="sub">
-                <li><a href="http://www.script-tutorials.com/"><b>Unillanos</b><p>custom description here</p><i></i></a></li>
-                <li><a href="http://www.script-tutorials.com/category/html-css/"><b>Página principal</b><p>Universidad de los Llanos</p><i></i></a></li>
-                <li><a href="http://www.script-tutorials.com/category/resources/"><b>Twitter</b><p>@unillanos_</p><i></i></a></li>
-                <li><a href="http://www.script-tutorials.com/about/"><b>Facebook</b><p>Red Unillanista</p><i></i></a></li>
-                <li><a href="http://www.script-tutorials.com/creating-css3-slideout-menu-5/"><b>Youtube</b><p>Unillanos Televisión</p><i></i></a></li>
-            </ul>
-        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-        </li>
-    </ul>
-    <div style="clear:both"></div>
+    <nav>
 
-		</div>
-	</footer>
+		<ul class="clearfix">
+
+			<li><a href="#"><span class="fontawesome-user"></span></a>
+
+				<ul>
+					<li><a href="https://www.facebook.com/UnillanosOficial/" class="facebook"><span class="fontawesome-facebook"></span></a></li>
+					<li><a href="https://twitter.com/unillanos_" class="twitter"><span class="fontawesome-twitter"></span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCmhXbLrVeyotUiBsaPBcxcA/feed" class="youtobe"><span class="fontawesome-play"></span></a></li>
+					<li><a href="http://www.unillanos.edu.co/" class="unillanos"><span class="fontawesome-underline"></span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	</div>
+
 	{% endblock %}
 </html>
