@@ -1,22 +1,19 @@
 
 <!DOCTYPE html>
-<head>
-    {% load static %}
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
-    <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-     <title>{% block title %} Registro {% endblock %}</title>
-</head>
+    <head>
+        {% load static %}
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
+        <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
+        <title>{% block title %} Registro {% endblock %}</title>
+    </head>
 
-<body>
-{% block logo%}
-        <div id = "logo">
-
-        </div>
-    {% endblock %}
-    {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
+    <body>
+        {% block logo%}
+        <div id = "logo"></div>
+        {% endblock %}
+        {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
 
 
         <div id = "cabe_acc">
@@ -36,28 +33,19 @@
                 <button type="submit"  id = "boton" class = "myButton">{% block boton %}Registrar{% endblock %}</button>
              </form>
         </div>
-<nav>
-
-		<ul class="clearfix">
-
-			<li><a href="#"><span class="fontawesome-user"></span></a>
-
-				<ul>
-
-					<li><a href="https://www.facebook.com/UnillanosOficial/" class="facebook"><span class="fontawesome-facebook"></span></a></li>
-					<li><a href="https://twitter.com/unillanos_" class="twitter"><span class="fontawesome-twitter"></span></a></li>
-					<li><a href="https://www.youtube.com/channel/UCmhXbLrVeyotUiBsaPBcxcA/feed" class="youtobe"><span class="fontawesome-play"></span></a></li>
-					<li><a href="http://www.unillanos.edu.co/" class="unillanos"><span class="fontawesome-underline"></span></a></li>
-
-
-				</ul>
-
-			</li>
-
-		</ul>
-
-	</nav>
-
-
-
-</body>
+       <a href= "{% url 'estudiante:index' %}"> <button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button>
+        <div id = "footer">
+            <nav>
+                <ul class="clearfix">
+			        <li><a href="#"><span class="fontawesome-user"></span></a>
+				        <ul>
+					        <li><a href="https://www.facebook.com/UnillanosOficial/" class="facebook"><span class="fontawesome-facebook"></span></a></li>
+					        <li><a href="https://twitter.com/unillanos_" class="twitter"><span class="fontawesome-twitter"></span></a></li>
+					        <li><a href="https://www.youtube.com/channel/UCmhXbLrVeyotUiBsaPBcxcA/feed" class="youtobe"><span class="fontawesome-play"></span></a></li>
+				            <li><a href="http://www.unillanos.edu.co/" class="unillanos"><span class="fontawesome-underline"></span></a></li>
+                        </ul>
+                     </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
