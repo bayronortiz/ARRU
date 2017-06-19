@@ -24,7 +24,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^estudiante/', include('apps.estudiante.urls')),
     url(r'^', include('apps.estudiante.urls')),
-    url(r'^administrador/', views.login_redirect, name = 'login_redirect'),
+    #url(r'^administrador/', views.login_redirect, name = 'login_redirect'),
+    url(r'^administrador/', include('apps.administrador.urls')),
+    #url(r'^', include('apps.administrador.urls')),
 ]
 
 if settings.DEBUG:
