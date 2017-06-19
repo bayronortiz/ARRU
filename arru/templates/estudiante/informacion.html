@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
     <head>
         {% load static %}
@@ -6,7 +5,7 @@
         <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
         <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
-        <title>{% block title %} Registro {% endblock %}</title>
+        <title>{% block title %} Información {% endblock %}</title>
     </head>
 
     <body>
@@ -17,34 +16,27 @@
 
 
         <div id = "cabe_acc">
-             <h2>{% block accion%} Registrar Estudiante {% endblock %}</h2>
+             <h2>{% block accion%} Información {% endblock %}</h2>
         </div>
-        <div id = "descrip">
+        
             <h3>{% block tit%} Bienvenido {% endblock %}</h3>
-            <p id = "des">{% block descri%} Para hacer uso del sistema, debera registrarse una única vez. Llene los campos y haga click en registar y podrá realizar su reserva en la ruta y horario que desee.  {% endblock %}</p>
+            <div id = "des">{% block descri%}Información referente a las rutas de barrio de la universidad de los llanos{% endblock %}
+                <select >
+                    <option value = ""></option>
+                    {% if rutas %}
+                    {% for ruta in rutas%}
+                    <option value = "{{ ruta.nombre_r }}">{{ ruta.nombre_r }}</option>
+                    {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
 
-        </div>
+            <button type="button" class="btn"  onclick ="" >Buscar</button>
 
-        <div id = "formulario" class = "form">
+        
 
-            <form method="post">
-                {%csrf_token %}
-                {{ form.as_p}}
-                <button type="submit"  id = "boton" class = "myButton">{% block boton %}Registrar{% endblock %}</button>
-             </form>
-        </div>
-
-       <a href= "{% url 'estudiante:index' %}"> <button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button></a>
-        {% block msg %}
-            {% if registro_exitoso %}
-                <h1> Registrado todo bien. </h1>
-            {% endif %}
-
-            {% if registro_existe %}
-                <h1> Ya esta registrado </h1>
-            {% endif %}
-        {% endblock %}
-      
+         
+        <a href= "{% url 'estudiante:index' %}"><button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button></a> 
         <div id = "footer">
             <nav>
                 <ul class="clearfix">

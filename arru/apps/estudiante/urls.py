@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^registro$', views.RegistrarEstudiante.as_view(), name='registro_estudiante' ),
     url(r'^reserva$', views.ReservarRuta.as_view(), name='reserva_ruta' ),
     url(r'^cancelar$', views.eliminar_ruta, name='cancelar_ruta'),
+    url(r'^informacion$',views.informacion,name='informacion'),
 ]

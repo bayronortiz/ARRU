@@ -69,4 +69,3 @@ class CancelarForm(forms.ModelForm):
             'nombre_r': forms.Select(attrs={'class': 'form-control'}),
             'hora': forms.Select(attrs={'class': 'form-control'}),    
         }
-

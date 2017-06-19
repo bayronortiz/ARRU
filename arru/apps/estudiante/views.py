@@ -6,8 +6,9 @@ from .forms import RegistroForm, ReservaForm, CancelarForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 from .models import Estudiante
-from apps.administrador.models import Toma
+from apps.administrador.models import Toma, Ruta
 from django.db import IntegrityError
+
 
 # Create your views here.
 def index(request):
@@ -86,3 +87,11 @@ def eliminar_ruta(request):
             return render(request, template_name, {'form':cancelar_ruta, 'reserva_no_existe':True})
 
     return render(request, template_name, {'form':cancelar_ruta})
+
+def informacion(request):   
+    template_name= "estudiante/informacion.html"
+    ruta = Ruta.objects.all().order_by('nombre_r')
+    contexto = {'rutas': ruta}
+
+    print ruta
+    return render(request, template_name,contexto)
