@@ -34,6 +34,15 @@
              </form>
         </div>
        <a href= "{% url 'estudiante:index' %}"> <button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button>
+        {% block msg %}
+            {% if registro_exitoso %}
+                <h1> Registrado todo bien. </h1>
+            {% endif %}
+
+            {% if registro_existe %}
+                <h1> Ya esta registrado </h1>
+            {% endif %}
+        {% endblock %}
         <div id = "footer">
             <nav>
                 <ul class="clearfix">

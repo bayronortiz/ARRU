@@ -12,5 +12,13 @@
         {% if msg %}
             {{ msg }}
         {% endif %}
-
     </form>
+     {% block msg %}
+        {% if reserva_cancelada %}
+            <h1> Reserva cancelada exitosamente. </h1>
+        {% endif %}
+
+        {% if reserva_no_existe %}
+            <h1> No existe reserva. </h1>
+        {% endif %}
+    {% endblock %}
