@@ -8,7 +8,7 @@ class Estudiante(models.Model):
     codigo_e = models.CharField(max_length=9, primary_key=True, validators=[
         RegexValidator(
             regex='^[0-9]*$',
-            message='El codigo debe ser numerico',
+            message='El código debe ser númerico',
 
         ),
 
@@ -16,7 +16,7 @@ class Estudiante(models.Model):
     nombre_e = models.CharField(max_length=30,validators=[
         RegexValidator(
             regex='^[a-zA-Z ]*$',
-            message='El nombre no debe contener numeros',
+            message='El nombre no debe contener números',
 
         ),
 
@@ -24,7 +24,7 @@ class Estudiante(models.Model):
     apellido_e = models.CharField(max_length=30, validators=[
         RegexValidator(
             regex='^[a-zA-Z ]*$',
-            message='El Apellido no debe contener numeros',
+            message='El Apellido no debe contener números',
 
         ),
 
