@@ -9,7 +9,6 @@ class Estudiante(models.Model):
         RegexValidator(
             regex='^[0-9]*$',
             message='El código debe ser númerico',
-
         ),
 
     ]) #Codigo estudiante
@@ -17,7 +16,6 @@ class Estudiante(models.Model):
         RegexValidator(
             regex='^[a-zA-Z ]*$',
             message='El nombre no debe contener números',
-
         ),
 
      ])  #Nombre estudiante
@@ -25,7 +23,6 @@ class Estudiante(models.Model):
         RegexValidator(
             regex='^[a-zA-Z ]*$',
             message='El Apellido no debe contener números',
-
         ),
 
      ])                 #Apellido estudiante
