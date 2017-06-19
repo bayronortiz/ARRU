@@ -18,11 +18,13 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from arru import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^estudiante/', include('apps.estudiante.urls')),
     url(r'^', include('apps.estudiante.urls')),
+    url(r'^administrador/', views.login_redirect, name = 'login_redirect'),
 ]
 
 if settings.DEBUG:
