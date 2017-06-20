@@ -6,6 +6,42 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
         <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
         <title>{% block title %} Información {% endblock %}</title>
+
+		<script type="text/javascript">
+
+		    function cargarMapa(){
+			    var listar=document.getElementById("lista");
+			    var selected = listar.options[listar.selectedIndex].text;
+			    selected= String(selected);
+			    if(selected=="Covisan" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m50!1m12!1m3!1d63673.24841588849!2d-73.62100565928914!3d4.105917535683089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m35!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m3!3m2!1d4.1162889!2d-73.5973145!4m5!1s0x8e3e2eeaf875b41b%3A0x36ed96ae71d8d1d7!2sKirpollo%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.117996499999999!2d-73.5852852!4m5!1s0x85d2f501bea0d385%3A0xbb36a6f84febd845!2sHotel+Campestre+El+Campanario%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1331739999999995!2d-73.566423!4m5!1s0x8e3e2ea06875cb91%3A0x3ef123a7031a4ce7!2sCdad.+Salitre%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.1394649!2d-73.580395!4m5!1s0x8e3e2e9e75fff363%3A0xbaf56bc511e8e433!2sCra.+15+Este%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.134742999999999!2d-73.5893339!5e0!3m2!1ses-419!2ses!4v1497895626376";
+			    }
+			    if(selected=="Exito" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m44!1m12!1m3!1d15917.964028843317!2d-73.63750556431756!3d4.12333352649608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m29!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m3!3m2!1d4.11906!2d-73.62543!4m3!3m2!1d4.118558!2d-73.62854949999999!4m3!3m2!1d4.1188306!2d-73.6295794!4m5!1s0x8e3e2e14ed411277%3A0x71cdb7e57c2607a1!2sCalle+7%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.1262713!2d-73.6369402!4m3!3m2!1d4.1270389!2d-73.6378956!5e0!3m2!1ses-419!2ses!4v1497895153888";
+			    }
+			    if(selected=="Grama" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d63672.46876523363!2d-73.64370330927873!3d4.11567908387849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m5!1s0x8e3e2e3c4dff7197%3A0x218249d8bac6187a!2sVehicolda+Anillo+Vial+Oficial%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.118806!2d-73.638164!4m5!1s0x8e3e2dc25df33247%3A0xa0c26454793989bb!2sToyota%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.15378!2d-73.62857!4m5!1s0x8e3e2dea3829e2fd%3A0x7c5dee6e78cf1287!2sTexaco%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.157039999999999!2d-73.63228!4m5!1s0x8e3e2dec618352b3%3A0x7677bdf00b73f50!2sIglesia+La+Grama%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1584733!2d-73.6372902!4m5!1s0x8e3e2ded7917a5a7%3A0xa85307551c83bb52!2s4+Parques+Gourmet+-+Calle+44+Bis%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.158797!2d-73.641378!5e0!3m2!1ses-419!2ses!4v1497896075708";
+			    }
+			    if(selected=="Maracos" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m50!1m12!1m3!1d53543.02178843985!2d-73.61634650076009!3d4.0997197695207985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m35!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m3!3m2!1d4.1162938!2d-73.5972914!4m3!3m2!1d4.1169123!2d-73.5874084!4m5!1s0x8e3e2e90a436b0f7%3A0xe7d209418b4e3586!2sCl.+24%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.129989999999999!2d-73.59110199999999!4m3!3m2!1d4.131882!2d-73.6050874!4m5!1s0x8e3e2e64b9578ccf%3A0xa294a23dcffe637b!2sCl.+6%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.130281399999999!2d-73.6135417!4m3!3m2!1d4.1274774999999995!2d-73.6147689!5e0!3m2!1ses-419!2ses!4v1497896550541";
+			    }
+			    if(selected=="Montecarlos" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m48!1m12!1m3!1d2813.871907728501!2d-73.64536008842407!3d4.138323674347953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m33!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m5!1s0x8e3e320b9edfea49%3A0x7e1cdb2331aa1e3!2sColegio+Juan+Pablo+II%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1600570999999995!2d-73.6552438!4m5!1s0x8e3e2e071c28218d%3A0x8c7cbf9b1fba4ee5!2sMultifamiliares+Villacodem+-+Calle+27%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.139162499999999!2d-73.6458932!4m3!3m2!1d4.1152299999999995!2d-73.6493888!4m3!3m2!1d4.1091959!2d-73.654732!4m5!1s0x8e3e2e2ada201141%3A0xb4b65b6493a0237a!2sCra.+42%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.1009044999999995!2d-73.6518625!5e0!3m2!1ses-419!2ses!4v1497897246327";
+			    }
+			    if(selected==" Porfia" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m48!1m12!1m3!1d53543.446108667056!2d-73.64862080009982!3d4.093379974273174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m33!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m5!1s0x8e3e31d7e6eb4d39%3A0x7ce11000a7b3cf0!2sLos+Capachos+Discoteca%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1109712!2d-73.6541728!4m3!3m2!1d4.107098!2d-73.65084499999999!4m5!1s0x8e3e31d543b44df1%3A0x3933d249ffb5e243!2sCra.+45%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.1030939!2d-73.654084!4m3!3m2!1d4.1044635!2d-73.6569774!4m5!1s0x8e3e303daec253eb%3A0xd16a76a31a4a828d!2sCl.+50+Sur%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.084862!2d-73.668801!5e0!3m2!1ses-419!2ses!4v1497899245541";
+			    }
+			    if(selected=="Postobon" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d63672.90563978191!2d-73.63537335928457!3d4.110212084889154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m5!1s0x8e3e2e7184959f0b%3A0xb2afac44f85ae75b!2sCoca+-+Cola+-+Calle+15%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1332002999999995!2d-73.6235469!4m5!1s0x8e3e2e71234f4123%3A0x6f25836d9aec066!2sParque+Sikuani%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1369182!2d-73.62136!4m5!1s0x8e3e2dd87e7a13cf%3A0xc81ad659856d979!2sFresilandia%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1412089!2d-73.6211494!4m5!1s0x8e3e2dda4db223ef%3A0x4dbe8f05de90bd87!2sBiblioteca+Publica+COFREM%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1475537!2d-73.6210048!5e0!3m2!1ses-419!2ses!4v1497899321949";
+			    }
+			    if(selected=="Terminal" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m48!1m12!1m3!1d22510.977151881823!2d-73.6259779613499!3d4.138257185619461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m33!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m3!3m2!1d4.1233541!2d-73.6119293!4m3!3m2!1d4.1306179!2d-73.6056552!4m3!3m2!1d4.131821899999999!2d-73.6052122!4m5!1s0x8e3e2dd3f1fed05b%3A0xa143f4e07c0377c5!2s11%2C+Cl+35+%2F+Av+Catama+%2311-162%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.1461361!2d-73.6116299!4m3!3m2!1d4.1468353!2d-73.6173532!4m3!3m2!1d4.1481195!2d-73.6230412!5e0!3m2!1ses-419!2ses!4v1497900115455";
+			    }
+			    if(selected=="Villacentro" ){
+				    document.all("frame1").src="https://www.google.com/maps/embed?pb=!1m38!1m12!1m3!1d3979.4154956848643!2d-73.63976636441411!3d4.138387154815731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m23!3e0!4m5!1s0x8e3e2f699906f93f%3A0xbbcdd4f58e307139!2sUnillanos%2C+Apiay+-+Meta%2C+Colombia!3m2!1d4.0723717!2d-73.5814967!4m5!1s0x8e3e2e0ddfab6b0d%3A0xc32888c25e9ff77b!2sCarrera+37%2C+Villavicencio%2C+Meta%2C+Colombia!3m2!1d4.1356!2d-73.63246!4m3!3m2!1d4.139215!2d-73.64100599999999!4m5!1s0x8e3e2e0e44ef111d%3A0x7ebeabc113cb30ef!2sCentro+Comercial+Villacentro%2C+Villavicencio+-+Meta%2C+Colombia!3m2!1d4.1334815!2d-73.6377854!5e0!3m2!1ses-419!2ses!4v1497900336094";
+			    }
+		    }
+		</script>
     </head>
 
     <body>
@@ -13,30 +49,24 @@
         <div id = "logo"></div>
         {% endblock %}
         {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
-
-
         <div id = "cabe_acc">
              <h2>{% block accion%} Información {% endblock %}</h2>
         </div>
-        
-            <h3>{% block tit%} Bienvenido {% endblock %}</h3>
-            <div id = "des">{% block descri%}Información referente a las rutas de barrio de la universidad de los llanos{% endblock %}
-                <select >
-                    <option value = ""></option>
-                    {% if rutas %}
-                    {% for ruta in rutas%}
-                    <option value = "{{ ruta.nombre_r }}">{{ ruta.nombre_r }}</option>
-                    {% endfor %}
-                    {% endif %}
-                </select>
-            </div>
-
-            <button type="button" class="btn"  onclick ="" >Buscar</button>
-
-        
-
-         
-        <a href= "{% url 'estudiante:index' %}"><button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button></a> 
+        <div id = "texto">{% block descri%}Información referente a las rutas de barrio de la universidad de los llanos, seleccione una ruta y podrá observar el recorrido y paraderos de la ruta{% endblock %}
+        </div>
+         <select  id = "lista">
+             <option value = ""></option>
+                {% if rutas %}
+                {% for ruta in rutas%}
+                <option value = "{{ ruta.nombre_r }}">{{ ruta.nombre_r }}</option>
+                {% endfor %}
+                {% endif %}
+         </select>
+         <button type="button"  id = "buscar" class="myButton"  onclick ="cargarMapa()" >Ver mapa</button>
+         <div id = "mapas">
+             <iframe src="" name="frame1"></iframe>
+         </div>
+        <a href= "{% url 'estudiante:index' %}"><button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button></a>
         <div id = "footer">
             <nav>
                 <ul class="clearfix">
