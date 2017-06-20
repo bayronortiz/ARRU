@@ -19,17 +19,17 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from arru import views
+#from django.contrib.auth.views import login
 
 urlpatterns = [
+    url('^$', views.index_redirect, name="index"),
     url(r'^admin/', admin.site.urls),
-	url(r'^estudiante/', include('apps.estudiante.urls')),
-    url(r'^', include('apps.estudiante.urls')),
-    #url(r'^administrador/', views.login_redirect, name = 'login_redirect'),
+    url(r'^estudiante/', include('apps.estudiante.urls')),
+    #url(r'^administrador/', login, {'template_name':'administrador/login.html'}, name='admin_login'),
     url(r'^administrador/', include('apps.administrador.urls')),
-    #url(r'^', include('apps.administrador.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    
+
 

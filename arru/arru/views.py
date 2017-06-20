@@ -1,5 +1,5 @@
 from django.shortcuts import redirect
 
-def login_redirect(request):
-	return redirect('/administrador/login/')
-	
+
+def index_redirect(request):
+    return redirect('/estudiante/index')

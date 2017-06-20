@@ -12,7 +12,7 @@ from django.db import IntegrityError
 
 # Create your views here.
 def index(request):
-    return render(request,'estudiante/index.html')
+    return render(request, 'estudiante/index.html')
 
 class RegistrarEstudiante(CreateView):
     model = Estudiante
@@ -88,7 +88,7 @@ def eliminar_ruta(request):
 
     return render(request, template_name, {'form':cancelar_ruta})
 
-def informacion(request):   
+def informacion(request):
     template_name= "estudiante/informacion.html"
     ruta = Ruta.objects.all().order_by('nombre_r')
     contexto = {'rutas': ruta}

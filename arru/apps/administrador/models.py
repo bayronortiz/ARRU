@@ -17,7 +17,7 @@ class Administrador(models.Model):
 
 def create_profile(sender, **kwargs):
     if kwargs['created']:
-        user_profile = Administrador.objects.create(user=kwargs['instance'])
+        user_profile = Administrador.objects.create(usuario=kwargs['instance'])
 post_save.connect(create_profile, sender=User)
 
 
