@@ -1,167 +1,100 @@
-@charset "utf-8";
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-
-@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
 body{
-	background:#fff;
-    text-align: center;
-	 font-family: 'Sofia', cursive;
-    font-size: 24px;
-    font-weight: bold;
-    font-size: 3.2em;
-    text-align: center;
-    margin-bottom: 20px;
-	color: #000000;
+    background-image: url('../images/rutas.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
-
-h1{
-	text-align: center;
-	 font-family: 'Sofia', cursive;
-
-    font-weight: bold;
-    font-size: 0.5em;
-    text-align: center;
-    margin-bottom: 20px;
-	color: #000000;
-}
-#titulo{
-	text-align: center;
-	 font-family: 'Sofia', cursive;
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 2.2em;
-    text-align: center;
-    margin-bottom: 20px;
-	color: #000000;
-}
-#cuerpo{
-	width: 700px;
-	height: 400px;
-	margin-left:350px;
-	margin-top: 5px;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 900;
-  color: #ecf0f1;
-}
-
-a:hover {
-  color: #bdc3c7;
-}
-
-@charset "utf-8";
-
-
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-
-@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
-
-
-
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-
-a { text-decoration: none; }
-
-.clearfix { *zoom: 1; }
-.clearfix:before, .clearfix:after {
-	display: table;
-	content: "";
-}
-.clearfix:after { clear: both; }
-
-
-
-nav {
-	margin: 50px auto;
-	width: 218px;
-}
-
-nav ul li {
-	margin-bottom: 50px;
-	position: relative;
-}
-
-nav > ul > li > a {
-	background-color: #ded0bb;
-	border: 4px solid #555555;
-	border-radius: 50%;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	color: #205067;
-	display: block;
-	height: 32px;
-	line-height: 32px;
-	text-align: center;
-	width: 32px;
-}
-
-nav ul li ul {
-	background: #f6eddb; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f6eddb 0%, #ccbba4 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6eddb), color-stop(100%,#ccbba4)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f6eddb 0%,#ccbba4 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f6eddb 0%,#ccbba4 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f6eddb 0%,#ccbba4 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #f6eddb 0%,#ccbba4 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6eddb', endColorstr='#ccbba4',GradientType=0 ); /* IE6-9 */
-	border-radius: 16px;
-	-moz-border-radius: 16px;
-	-webkit-border-radius: 16px;
-	box-shadow: 0px 1px 2px #352f2c;
-	display: block;
-	height: 40px;
-	left: 52px;
-	padding: 0 8px;
-	position: absolute;
+#main-header {
+	background: #943126 ;
+	color: white;
+	height: 80px;
+	width: 100%;
+	left: 0;
 	top: 0;
+	position: fixed;
 }
-
-nav ul li ul:before {
-	background: #e7dbc7; /* Old browsers */
-	background: -moz-linear-gradient(top,  #e7dbc7 0%, #dbcdb8 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e7dbc7), color-stop(100%,#dbcdb8)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #e7dbc7 0%,#dbcdb8 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #e7dbc7 0%,#dbcdb8 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #e7dbc7 0%,#dbcdb8 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #e7dbc7 0%,#dbcdb8 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7dbc7', endColorstr='#dbcdb8',GradientType=0 ); /* IE6-9 */
-	content: "";
-	display: block;
-	height: 8px;
-	left: -4px;
-	position: absolute;
-	top: 16px;
-	transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	width: 8px;
+#main-header a {
+	color: white;
 }
-
-nav ul li ul li {
+#logo-header {
 	float: left;
+	padding: 20px 0 0 40px;
+	text-decoration: none;
 }
-
-nav ul li ul li a {
-	border: none;
-	color: #645650;
+#logo-header:hover {
+	color: #dbcdb8    ;
+}
+#logo-header .site-name {
 	display: block;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	width: 30px;
+	font-weight: 700;
+	font-size: 1.8em;
 }
+#logo-header .site-desc {
+	display: block;
+	font-weight: 300;
+	font-size: 0.8em;
+	color: #CD6155  ;
+}
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+}
+nav ul li a {
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	background: #CD6155;
+}
+.formulario{
+	border-radius:5px;
+	background:RGBA(255,255,255,1);
+	-webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+	box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+	margin:0px 40px;
+	width : 50%;
+	height: 300px;
+	border: 1px solid gray;
+	padding: 2em 3em;
+    margin: 6em 22% 5em;
+	background-size:cover;
+	border:#fff 15px solid;
+ }
+a{
+  display:block;
+  color:#ad5482;
+  text-decoration:none;
+  font-weight:bold;
+  margin-bottom:30px;
+  text-align:center;
 
-
-
-
-
+}
+#main-footer {
+	background: #943126;
+	color: white;
+	text-align: center;
+	padding: 20px 0px;
+	height:30px;
+	bottom:0;
+	width:100%;
+    margin: 1em 0px;
+}
+#main-footer p {
+	margin: 0;
+}
+#main-footer a {
+	color: white;
+}
 
