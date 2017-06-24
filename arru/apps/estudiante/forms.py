@@ -15,15 +15,15 @@ class RegistroForm(forms.ModelForm):
         ]
 
         labels = {
-            'codigo_e': 'Código',
-            'nombre_e': 'Nombre',
-            'apellido_e': 'Apellido',
+            'codigo_e': '',
+            'nombre_e': '',
+            'apellido_e': '',
         }
 
         widgets = {
-            'codigo_e': forms.TextInput(attrs={'class': 'form-control'}),
-            'nombre_e': forms.TextInput(attrs={'class': 'form-control'}),
-            'apellido_e': forms.TextInput(attrs={'class': 'form-control'}),
+            'codigo_e': forms.TextInput(attrs={'class': 'textbox', 'placeholder': 'Código'}),
+            'nombre_e': forms.TextInput(attrs={'class': 'textbox', 'placeholder': 'Nombre'}),
+            'apellido_e': forms.TextInput(attrs={'class': 'textbox', 'placeholder':'Apellido'}),
         }
 
 class ReservaForm(forms.ModelForm):
@@ -37,20 +37,21 @@ class ReservaForm(forms.ModelForm):
             ]
 
         labels = {
-            'codigo_e': 'Código',
-            'nombre_r': 'Ruta',
-            'hora': 'Hora',
+            'codigo_e': '',
+            'nombre_r': '',
+            'hora': '',
             }
 
         widgets = {
-            'codigo_e': forms.TextInput(attrs={'class': 'form-control'}),
-            'nombre_r': forms.Select(attrs={'class': 'form-control'}),
-            'hora': forms.Select(attrs={'class': 'form-control'}),
+            'codigo_e': forms.TextInput(attrs={'class': 'textbox', 'placeholder':'Código'}),
+            'nombre_r': forms.Select(attrs={'class': 'textbox', 'initial' : 'meme','placeholder':'Ruta'}),
+            'hora': forms.Select(attrs={'class': 'textbox', 'placeholder':'Hora'}),
             }
+
 
 class CancelarForm(forms.ModelForm):
     class Meta:
-        model= Toma
+        model = Toma
 
         fields =[
             'codigo_e',
@@ -59,13 +60,13 @@ class CancelarForm(forms.ModelForm):
             ]
 
         labels = {
-            'codigo_e':'Código',
-            'nombre_r':'Ruta',
-            'hora': 'Hora',
+            'codigo_e': '',
+            'nombre_r': '',
+            'hora': '',
         }
 
         widgets = {
-            'codigo_e': forms.TextInput(attrs={'class': 'form-control'}),
-            'nombre_r': forms.Select(attrs={'class': 'form-control'}),
-            'hora': forms.Select(attrs={'class': 'form-control'}),    
+            'codigo_e': forms.TextInput(attrs={'class': 'textbox', 'placeholder': 'Código'}),
+            'nombre_r': forms.Select(attrs={'class': 'textbox', 'placeholder': 'Ruta'}),
+            'hora': forms.Select(attrs={'class': 'textbox', 'placeholder': 'Hora'}),
         }

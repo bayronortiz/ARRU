@@ -37,7 +37,7 @@ class RegistrarEstudiante(CreateView):
                 registro = form.save()
                 return render(request, "estudiante/registro.html", {'form':self.form_class, 'registro_exitoso':True})
             except IntegrityError:
-                return render(request, "estudiante/registro.html", {'form':form, 'registro_existe':True})
+                return render(request, "estudiante/registro.html", {'form':form, 'registro_existe':True })
         else:
             return self.render_to_response(self.get_context_data(form=form))
 

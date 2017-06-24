@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<html>
     <head>
         {% load static %}
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -10,53 +11,44 @@
     </head>
 
     <body>
-        {% block logo%}
-        <div id = "logo"></div>
-        {% endblock %}
-        {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
 
+        <header id="main-header">
+			<a id="logo-header" href="#">
+				<span class="site-name">Rutas de barrio Unillanos</span>
+            </a>
+			<nav>
+				<ul>
 
-        <div id = "cabe_acc">
-             <h2>{% block accion%} Registrar Estudiante {% endblock %}</h2>
-        </div>
-        <div id = "descrip">
-            <h3>{% block tit%} Bienvenido {% endblock %}</h3>
-            <p id = "des">{% block descri%} Para hacer uso del sistema, debera registrarse una única vez. Llene los campos y haga click en registar y podrá realizar su reserva en la ruta y horario que desee.  {% endblock %}</p>
+					<li><a href="{% url 'index' %}">Principal</a></li>
+					<li>{% block OP1 %}<a href="{% url 'estudiante:informacion' %}"> Informacion</a>{% endblock %}</li>
+					<li>{% block OP2 %}<a href="{% url 'estudiante:reserva_ruta' %}"> Reservar</a>{% endblock %}</li>
+					<li>{% block OP3 %}<a href="{% url 'estudiante:cancelar_ruta' %}"> Cancelar</a>{% endblock %}</li>
+				</ul>
+			</nav>
+		</header>
 
-        </div>
-
-        <div id = "formulario" class = "form">
-
-            <form method="post">
+        <div id = "titulo">
+			 {% block titulo %} REGISTRO{% endblock %}
+		</div>
+        {% block cuerpo %}
+        <div  class = "formulario">
+            <form method="post" class = "form">
                 {%csrf_token %}
                 {{ form.as_p}}
-                <button type="submit"  id = "boton" class = "myButton">{% block boton %}Registrar{% endblock %}</button>
+                <button type="submit"  class = "button">{% block boton %}Registrar{% endblock %}</button>
+                {% block msg %}
+                    {% if registro_existe %}
+                        <div class="error"><b>El registo ya existe.</b></div>
+                    {% elif registro_exitoso  %}
+                         <div class="correcto"><b>Registro Exitoso.</b></div>
+                    {% endif %}
+                {% endblock %}
              </form>
         </div>
-
-       <a href= "{% url 'estudiante:index' %}"> <button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button></a>
-        {% block msg %}
-            {% if registro_exitoso %}
-                <h1> Registrado todo bien. </h1>
-            {% endif %}
-
-            {% if registro_existe %}
-                <h1> Ya esta registrado </h1>
-            {% endif %}
         {% endblock %}
-      
-        <div id = "footer">
-            <nav>
-                <ul class="clearfix">
-			        <li><a href="#"><span class="fontawesome-user"></span></a>
-				        <ul>
-					        <li><a href="https://www.facebook.com/UnillanosOficial/" class="facebook"><span class="fontawesome-facebook"></span></a></li>
-					        <li><a href="https://twitter.com/unillanos_" class="twitter"><span class="fontawesome-twitter"></span></a></li>
-					        <li><a href="https://www.youtube.com/channel/UCmhXbLrVeyotUiBsaPBcxcA/feed" class="youtobe"><span class="fontawesome-play"></span></a></li>
-				            <li><a href="http://www.unillanos.edu.co/" class="unillanos"><span class="fontawesome-underline"></span></a></li>
-                        </ul>
-                     </li>
-                </ul>
-            </nav>
-        </div>
+
+        <footer id="main-footer">
+			<p><a href="#">Universidad de los Llanos</a></p>
+		</footer>
     </body>
+</html>

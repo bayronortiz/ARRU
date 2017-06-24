@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+{% extends 'estudiante/registro.html' %}
     <head>
         {% load static %}
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -7,10 +9,27 @@
         <link REL="SHORTCUT ICON" href="{% static 'favicon/favicon.ico' %}">
         <title>{% block title %} Información {% endblock %}</title>
 
-		<script type="text/javascript">
 
+    </head>
+
+    <body>
+        {% block OP1 %}<a href="{% url 'estudiante:registro_estudiante'%}">  Registro</a>{% endblock %}
+        {% block OP2 %}<a href="{% url 'estudiante:reserva_ruta' %}"> Reservar</a>{% endblock %}
+        {% block OP3 %}<a href="{% url 'estudiante:cancelar_ruta' %}">  Cancelar</a>{% endblock %}
+        {% block titulo %} INFORMACIÓN{% endblock %}
+         {% block cuerpo %}
+        <div  class = "formulario1">
+            <select  class= "textbox1" id = "lista">
+                <option value = ""></option>
+                    {% if rutas %}
+                    {% for ruta in rutas%}
+                <option value = "{{ ruta.nombre_r }}">{{ ruta.nombre_r }}</option>
+                    {% endfor %}
+                    {% endif %}
+             </select>
+            <script type="text/javascript">
 		    function cargarMapa(){
-			    var listar=document.getElementById("lista");
+		        var listar=document.getElementById("lista");
 			    var selected = listar.options[listar.selectedIndex].text;
 			    selected= String(selected);
 			    if(selected=="Covisan" ){
@@ -42,43 +61,12 @@
 			    }
 		    }
 		</script>
-    </head>
+            <button type="button"  class="button1"  onclick ="cargarMapa()">Ver mapa</button>
 
-    <body>
-        {% block logo%}
-        <div id = "logo"></div>
+                <iframe src="" id="frame" name ="frame1"></iframe>
+
+        </div>
         {% endblock %}
-        {% block titulo%}<h1>RUTAS DE BARRIO UNILLANOS</h1>{% endblock %}
-        <div id = "cabe_acc">
-             <h2>{% block accion%} Información {% endblock %}</h2>
-        </div>
-        <div id = "texto">{% block descri%}Información referente a las rutas de barrio de la universidad de los llanos, seleccione una ruta y podrá observar el recorrido y paraderos de la ruta{% endblock %}
-        </div>
-         <select  id = "lista">
-             <option value = ""></option>
-                {% if rutas %}
-                {% for ruta in rutas%}
-                <option value = "{{ ruta.nombre_r }}">{{ ruta.nombre_r }}</option>
-                {% endfor %}
-                {% endif %}
-         </select>
-         <button type="button"  id = "buscar" class="myButton"  onclick ="cargarMapa()" >Ver mapa</button>
-         <div id = "mapas">
-             <iframe src="" name="frame1"></iframe>
-         </div>
-        <a href= "{% url 'estudiante:index' %}"><button type="submit"  id = "boton1" class = "myButton1"  >{% block botonv %}Volver{% endblock %}</button></a>
-        <div id = "footer">
-            <nav>
-                <ul class="clearfix">
-			        <li><a href="#"><span class="fontawesome-user"></span></a>
-				        <ul>
-					        <li><a href="https://www.facebook.com/UnillanosOficial/" class="facebook"><span class="fontawesome-facebook"></span></a></li>
-					        <li><a href="https://twitter.com/unillanos_" class="twitter"><span class="fontawesome-twitter"></span></a></li>
-					        <li><a href="https://www.youtube.com/channel/UCmhXbLrVeyotUiBsaPBcxcA/feed" class="youtobe"><span class="fontawesome-play"></span></a></li>
-				            <li><a href="http://www.unillanos.edu.co/" class="unillanos"><span class="fontawesome-underline"></span></a></li>
-                        </ul>
-                     </li>
-                </ul>
-            </nav>
-        </div>
+
     </body>
+</html>

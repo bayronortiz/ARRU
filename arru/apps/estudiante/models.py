@@ -12,7 +12,7 @@ class Estudiante(models.Model):
         ),
 
     ]) #Codigo estudiante
-    nombre_e = models.CharField(max_length=30,validators=[
+    nombre_e = models.CharField(max_length=30, validators=[
         RegexValidator(
             regex='^[a-zA-Z ]*$',
             message='El nombre no debe contener números',

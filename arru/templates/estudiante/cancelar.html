@@ -1,24 +1,19 @@
 {% extends 'estudiante/registro.html' %}
    {% block title %} Cancelar {% endblock %}
-    {% block accion%}CANCELAR CUPO{% endblock %}
-    {% block tit%} Adios!!! {% endblock %}
-{% block descri%} Para cancelar un cupo, deber haber reservado uno previamente, digite el código, la ruta y la hora en la que realizo la reserva.  {% endblock %}
+    {% block OP1 %}<a href="{% url 'estudiante:informacion' %}">  Informacion</a>{% endblock %}
+    {% block OP2 %}<a href="{% url 'estudiante:registro_estudiante' %}">  Registro</a>{% endblock %}
+    {% block OP3 %}<a href="{% url 'estudiante:reserva_ruta' %}">  Reservar</a>{% endblock %}
+    {% block titulo %} CANCELAR{% endblock %}
     <form method="post">
         {%csrf_token %}
         {{ form.as_p }}
-
-        <button type="submit" >{% block boton %}Cancelar{% endblock %}</button>
-        <br><br>
-        {% if msg %}
-            {{ msg }}
-        {% endif %}
-    </form>
-     {% block msg %}
+        {% block boton %}Cancelar{% endblock %}
+        {% block msg %}
         {% if reserva_cancelada %}
-            <h1> Reserva cancelada exitosamente. </h1>
-        {% endif %}
-
-        {% if reserva_no_existe %}
-            <h1> No existe reserva. </h1>
+            <div class="correcto"><b>Cancelación Exitosa.</b></div>
+        {% elif reserva_no_existe %}
+           <div class="error"><b>Reserva no existe.</b></div>
         {% endif %}
     {% endblock %}
+    </form>
+
