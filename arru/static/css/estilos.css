@@ -2,6 +2,9 @@ body{
     background-image: url('../images/rutas.png');
     background-repeat: no-repeat;
     background-size: 100%;
+   }
+h1{
+    font-size: 1em;
 }
 #main-header {
 	background: #943126 ;
